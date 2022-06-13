@@ -7,7 +7,7 @@
 <input v-model="settime"/>
 <button @click="starttimer">START</button>
 <button @click="cleartimer">STOP</button>
-
+<p>uodate</p>
 
 </template>
 
