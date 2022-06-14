@@ -6,6 +6,7 @@ import timerC1 from '@/components/timerC1.vue'
 import timerC2 from '@/components/timerC2.vue'
 import brick1 from '@/components/small/brick1.vue'
 import brick1timed from '@/components/small/brick1timed.vue'
+import gridRGB from '@/components/gridRGB.vue'
 //import RGBtest from '@/components/RGBtest.vue'
 </script>
 
@@ -51,6 +52,11 @@ import brick1timed from '@/components/small/brick1timed.vue'
         <td><brick1timed/></td>
       </tr>
     </table>
+    <table class="HomeEl">
+      <tr>
+        <td><gridRGB/></td>
+      </tr>
+    </table>
 
 
 
@@ -63,10 +69,9 @@ import brick1timed from '@/components/small/brick1timed.vue'
 
 
 
-<style>
+<style scoped>
 .HomeEl {
   display: flex;
-
   background-color: rgb(230, 230, 230);
   padding: 20px;
   margin: 20px;

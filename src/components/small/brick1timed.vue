@@ -1,9 +1,6 @@
 <template>
 <table class="brick" @mouseenter="hov()" @mouseleave="leave()">
 
-  <tr>
-    <td><p>sggsdg</p></td>
-  </tr>
 </table>
 </template>
 
@@ -108,7 +105,6 @@ export default {
     font-size: 0%;
     width: 10px;
     height: 10px;
-    max-height: 10px;
     background-color: v-bind(col2);
   }
 </style>
