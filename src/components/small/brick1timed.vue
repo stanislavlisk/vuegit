@@ -16,6 +16,7 @@ export default {
       return {
           color: 'rgb(100,100,100)',
           rgb: [50, 50, 50],
+          defaultRgb: [0, 0, 0],
           time: 10,
           set: true,
           going: false
@@ -28,7 +29,7 @@ export default {
     },
 
     col2() {
-      return this.color = 'rgb(' + this.col + ')';
+      return 'rgb(' + this.col + ')';
     },
   },
 
@@ -36,7 +37,7 @@ export default {
   methods: {
 
     hov() {
-      this.color = 'rgb( 10, 10, 10)'
+      this.rgb = this.defaultRgb.slice(0);
       this.set = true;
       if (this.going == false) {
         this.time = 10;
@@ -54,7 +55,7 @@ export default {
     increaseRgb() {
         let tmp = [];
         for (let i in this.rgb) {
-          tmp.push(this.rgb[i] + 20);
+          tmp.push(this.rgb[i] + 10);
           console.log(tmp);
         };
         for (let i in tmp) {
@@ -66,7 +67,6 @@ export default {
         };
         this.rgb = tmp.slice(0);
         console.log(this.rgb);
-        console.log('this col2   ' + this.col2);
     },
 
     timer() {
@@ -75,6 +75,7 @@ export default {
         if (this.set == true) {
           setTimeout(() => {
             this.time-- ;
+            this.increaseRgb();
             this.timer();
             }, "200")
         }
@@ -108,6 +109,6 @@ export default {
     width: 10px;
     height: 10px;
     max-height: 10px;
-    background-color: v-bind(color);
+    background-color: v-bind(col2);
   }
 </style>
