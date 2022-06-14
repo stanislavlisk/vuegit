@@ -176,3 +176,99 @@ mounted(){
             this.timerWidth = 0;
         }
     }
+
+    //////////////////////////////////////////
+    ////hovers
+
+    <template>
+  <div id="a" :style="style" @mouseover="mouseOver()">
+  </div>
+</template>
+
+<script>
+  export default {
+    name: 'SquareButton',
+    props: ['color'],
+    computed: {
+      style () {
+        return 'background-color: ' + this.hovering ? this.color: 'red';
+      }
+    },
+    data () {
+      return {
+        hovering: false
+      }
+    },
+    methods: {
+      mouseOver () {
+       this.hovering = !this.hovering
+      }
+    }
+  }
+</script>
+
+<style scoped>
+<style>
+
+/////////////////////////////////////////////////////////
+
+    <template>
+  <div
+    id="a"
+    :style="{ '--image-url': 'url(' + image + ')' }">
+  </div>
+</template>
+
+<script>
+  export default {
+    name: 'SquareButton',
+    props: ['image']
+  }
+</script>
+
+<style scoped>
+  #a {
+    background-url: var(--image-url);
+  }
+<style>
+//////////////////////////////////////////////////////////////
+    <template>
+      <div id="a">
+      </div>
+    </template>
+
+    <script>
+      export default {
+        name: 'SquareButton',
+        props: ['color']
+      }
+    </script>
+
+    <style scoped>
+        #a {
+          background-color: v-bind(color);
+        }
+    <style>
+////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////
+    <template>
+  <div>
+    <div class="text">hello</div>
+  </div>
+</template>
+
+<script>
+  export default {
+    data() {
+        return {
+            color: 'red',
+        }
+    }
+  }
+</script>
+
+<style>
+  .text {
+    color: v-bind(color);
+  }
+</style>
