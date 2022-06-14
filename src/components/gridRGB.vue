@@ -1,22 +1,22 @@
 <template class="">
   <table class="fle nopads" >
 
-      <brick1timed class="fleself nopads" v-for="item in array1"/>
+      <brick2timed class="fleself nopads" v-for="item in array1"/>
 
   </table>
 
 </template>
 
 <script>
-    import brick1timed from './small/brick1timed.vue';
+    import brick2timed from './small/brick2timed.vue';
 
     export default {
       components: {
-        brick1timed
+        brick2timed
       },
       data() {
         return {
-          gridx: 100
+          gridx: 400
         }
       },
       computed: {
@@ -48,8 +48,8 @@
     flex-wrap: wrap;
     align-content: flex-start;
     gap: 0px 0px;
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
     line-height: 0px;
     background-color: red;
   }
