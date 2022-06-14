@@ -5,6 +5,7 @@ import RGBtest from '@/components/RGBtest.vue'
 import timerC1 from '@/components/timerC1.vue'
 import timerC2 from '@/components/timerC2.vue'
 import brick1 from '@/components/small/brick1.vue'
+import brick1timed from '@/components/small/brick1timed.vue'
 //import RGBtest from '@/components/RGBtest.vue'
 </script>
 
@@ -43,6 +44,11 @@ import brick1 from '@/components/small/brick1.vue'
     <table class="HomeEl">
       <tr>
         <td><brick1/></td>
+      </tr>
+    </table>
+    <table class="HomeEl">
+      <tr>
+        <td><brick1timed/></td>
       </tr>
     </table>
 

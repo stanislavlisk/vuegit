@@ -272,3 +272,21 @@ mounted(){
     color: v-bind(color);
   }
 </style>
+////////////////////////////////////////////////////////
+//////////
+const timer = setInterval(() => {
+  if (condition) {
+    clearInterval(timer);
+    return;
+  }
+
+  // Execute the function
+}, 100);
+
+//////////////////////////////////////////////////////////////
+//bool computedValue
+computed () {
+  return {
+    isVendorOrAgent: Boolean(this.entityName === "vendor" || this.entityName === "agent")
+  }
+}
